@@ -1,9 +1,14 @@
+<!-- ===================================================== -->
+<!-- FILE 1 : index.html -->
+<!-- HALAMAN AWAL -->
+<!-- ===================================================== -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DJ KICAU MANIA 🔥🐦</title>
+<title>DJ Kicau Mania 🔥</title>
 
 <style>
 *{
@@ -15,46 +20,37 @@ font-family:Comic Sans MS, Arial, sans-serif;
 
 body{
 min-height:100vh;
-background:
-linear-gradient(135deg,#ff00ea,#ff7b00,#00e1ff,#00ff59);
-background-size:400% 400%;
-animation:bggerak 8s infinite alternate;
 display:flex;
 justify-content:center;
 align-items:center;
+background:linear-gradient(135deg,#ff00cc,#ff8800,#00eaff,#00ff55);
+background-size:400% 400%;
+animation:bg 7s infinite alternate;
 padding:20px;
 overflow:hidden;
 }
 
-/* BACKGROUND GOYANG */
-@keyframes bggerak{
+@keyframes bg{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
 
-/* BOX */
 .box{
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,.15);
 backdrop-filter:blur(10px);
-padding:40px;
+padding:45px;
 border-radius:30px;
 text-align:center;
 max-width:700px;
 width:100%;
-box-shadow:0 20px 50px rgba(0,0,0,0.25);
-animation:naikturun 1.5s infinite alternate;
-}
-
-@keyframes naikturun{
-from{transform:translateY(0px);}
-to{transform:translateY(-10px);}
+box-shadow:0 20px 50px rgba(0,0,0,.25);
 }
 
 h1{
 font-size:55px;
 color:white;
-text-shadow:4px 4px 0 #000;
+text-shadow:4px 4px 0 black;
 margin-bottom:10px;
 }
 
@@ -62,107 +58,71 @@ h2{
 font-size:28px;
 color:#fff700;
 margin-bottom:20px;
-text-shadow:2px 2px 0 #000;
+text-shadow:2px 2px 0 black;
 }
 
 p{
 font-size:20px;
 color:white;
-margin-bottom:25px;
 font-weight:bold;
+margin-bottom:25px;
+line-height:1.7;
 }
 
-/* BUTTON */
 .btn{
-display:inline-block;
 padding:18px 35px;
-background:#fff700;
-color:#000;
 font-size:22px;
 font-weight:bold;
 border:none;
 border-radius:50px;
 cursor:pointer;
-transition:0.3s;
-box-shadow:0 10px 20px rgba(0,0,0,0.25);
-animation:goyang 0.7s infinite alternate;
+background:#fff700;
+color:black;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 .btn:hover{
-transform:scale(1.12) rotate(-3deg);
-background:#00ff59;
+transform:scale(1.1);
+background:#00ff55;
 }
 
-@keyframes goyang{
-from{transform:rotate(-2deg);}
-to{transform:rotate(2deg);}
-}
-
-/* TEKS BAWAH */
 .note{
-margin-top:20px;
+margin-top:18px;
 font-size:18px;
 color:white;
 }
 
-/* BURUNG TERBANG */
-.burung{
-position:absolute;
-font-size:45px;
-animation:terbang 12s linear infinite;
-}
-
-.b1{top:10%; left:-10%;}
-.b2{top:70%; left:-20%; animation-delay:3s;}
-.b3{top:40%; left:-15%; animation-delay:6s;}
-
-@keyframes terbang{
-from{transform:translateX(0);}
-to{transform:translateX(130vw);}
-}
-
 @media(max-width:768px){
-
 h1{font-size:38px;}
 h2{font-size:22px;}
 p{font-size:17px;}
 .btn{font-size:18px;padding:15px 28px;}
-
 }
 </style>
 </head>
 
 <body>
 
-<div class="burung b1">🐦</div>
-<div class="burung b2">🦜</div>
-<div class="burung b3">🐤</div>
-
 <div class="box">
 
 <h1>DJ KICAU MANIA</h1>
-<h2>🔥 Goyang Sangkar Nasional 🔥</h2>
+<h2>🔥 GOYANG BURUNG NASIONAL 🔥</h2>
 
 <p>
-Siap-siap kuping bergetar...<br>
-Burung aja joget kalau denger ini 🐦💃
+Sekali pencet...<br>
+langsung bunyi jedag jedug 😭🔥
 </p>
 
-<button class="btn" onclick="putarVideo()">
-▶ PUTAR DJ SEKARANG
+<button class="btn" onclick="window.location.href='video.html'">
+▶ PUTAR SEKARANG
 </button>
 
 <div class="note">
-Waspada tetangga ikut joget 😭🔥
+Siapkan speaker tetangga 💥
 </div>
 
 </div>
-
-<script>
-function putarVideo(){
-window.location.href = "video.html";
-}
-</script>
 
 </body>
 </html>
